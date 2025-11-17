@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+          .maincontainer{
+            margin: 20px;
+            display: flex;
+            flex-direction:column;
+            gap:30px;
+          }
+
+          .container1{
+               display: flex;
+               gap:25px;
+               width: calc(200px*10);
+               animation: scroll 10s linear infinite;
+          }
+             @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(40%);
+            }
+            
+          }
+
+          .container2{
+            display: flex;
+            gap: 25px;
+          }
+
+
+          img{
+            width:100px;
+            height: 100px;
+            border-radius: 25px;
+            box-shadow: rgba(160, 158, 158, 0.24) 0px 3px 8px;
+          }
+    </style>
 </head>
 <body>
-    <div>
+ <div class="maincontainer">
+    <div  class="container1">
         <div>
             <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/airmeet_93e45faced.svg" >
         </div>
@@ -34,7 +72,7 @@
     </div>
 
 
-    <div>
+    <div class="container2">
         <div>
             <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/eatfit_9dc276a187.svg">
         </div>
@@ -60,6 +98,6 @@
             <img src="https://masai-website-images.s3.ap-south-1.amazonaws.com/ajio_a16cd7a85b.svg">
         </div>
     </div>
-    
+</div>
 </body>
 </html>
