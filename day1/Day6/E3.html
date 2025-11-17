@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <style>
+            .container{
+                font-size: 20px;
+                width: 500px;
+                height: 600px;
+                padding:30px 26px;
+                margin: 10px;
+                border: 3px solid grey;
+                display: flex;
+                flex-direction: column;
+                border:none;
+                border-radius: 20px;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+            }
+            #firstimg{
+                position: top;
+                width: 300px;
+                height: 300px;
+                margin-bottom:29px;
+            }
+            #firsth3{
+                color: black;
+                margin:0px;
+            }
+
+            #secondh3{
+                color: grey;
+            }
+            #firstpera{
+                color: grey;
+                margin: 2pxpx;
+            }
+            
+            #rating{
+                color: white;;
+                border-radius: 3px;
+                padding: 0px 5px;
+                background-color: rgb(5, 149, 67);
+                margin:0px;
+            }
+
+            #rate2{
+                color: grey;
+                font-weight: 700;
+        
+            }
+
+            #bnkofr{
+                color: green;
+        
+            }
+            #buybtn{
+                color: white;
+                width: 100px;
+                font-weight: bold;
+                padding: 9px;
+                border: none;
+                background-color: rgb(219, 6, 66);
+                border-radius:40px;
+            }
+            .pricepera{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                font-size: 29px;
+              }
+
+            .ratingbox{
+                display: flex;
+                font-size: 29px;
+                align-items: center;
+                gap: 20px;
+            }
+
+            #scndimg{
+                width:90px;
+                height: 30px;
+            }
+            #actualp{
+                font-weight: bold;
+            }
+
+            #cutp{
+                text-decoration: line-through;
+                color: grey;
+                font-weight: bold;
+            }
+            #offer{
+                color: green;
+                font-weight: bold;
+            }
+
+            p, h3{
+                margin:10px;
+            }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <img  id="firstimg" src="https://rukminim2.flixcart.com/image/612/612/xif0q/smartwatch/w/x/h/-original-imahfa7xspmxemvj.jpeg">
+
+        <h3 id="firsth3">SAMSUNG Galaxy Watch6 LTE</h3>
+        <p id="firstpera">Graphite Strap, 44mm</p>
+        <p class="ratingbox">
+            <span id="rating">4.3 ☆  </span>
+            <span id="rate2">(973)</span>
+            <img id="scndimg"  src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png">
+        </p>
+        <p class="pricepera">
+           <span id="actualp">₹81,999</span>
+            <span id="cutp">₹41,999</span>
+            <span id="offer">54% off</span>
+        </p>
+        <h3 id="bnkofr">Bank Offer</h3>
+        <button id="buybtn">Buy Now</button>
+    </div>
+</body>
+</html>
