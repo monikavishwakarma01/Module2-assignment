@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator UI with CSS Grid</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f1f2f6;
+      font-family: Arial, sans-serif;
+    }
+
+    .calculator {
+      width: 300px;
+      padding: 25px;
+      background-color:#f7f9fc;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(219, 216, 216, 0.15);
+    }
+
+    .display {
+      background-color:white;
+      height: 50px;
+      padding: 10px;
+      text-align: right;
+      /* font-size: 28px; */
+      border-radius: 5px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 12px rgba(105, 104, 104, 0.15);
+    }
+    .content {
+      padding: 10px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      border-radius:5px;
+      box-shadow: rgba(196, 195, 195, 0.25) 0px 54px 55px, rgba(248, 246, 246, 0.12) 0px -12px 30px, rgba(216, 212, 212, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    button {
+        margin:3px;
+        height: 53px;
+      padding: 10px;
+      border: none;
+      background-color:white;
+      color: #696464;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(203, 201, 201, 0.15);
+    }
+    .operator {
+      background-color: #0f0e0e;
+      color: #dfe4ea;
+    }
+    
+    .c-color{
+        background-color: red;
+        color: #e6e8e8;
+    }
+    
+   
+  </style>
+</head>
+<body>
+<div>
+<h2 style="text-align: center; color: green; font-size: 40px; font-family: sans-serif;">Masai Calculator</h2>
+      
+  <div class="calculator">
+    <div class="display">0</div>
+    <div class="content">
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button class="operator">+</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button class="operator">-</button>
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="operator">*</button>
+      <button class="c-color">c</button>
+      <button>0</button>
+      <button class="operator">=</button>
+      <button class="operator">/</button>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>

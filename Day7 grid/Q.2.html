@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         
+
+         #parent{
+            display:grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            margin: auto;
+         }
+         #parent >div{
+            background-color: beige;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            font-weight: bold;
+            font-family: sans-serif;
+         }
+
+         #parent > div:first-child{
+             visibility: hidden;
+         }
+
+         #parent >div:last-child{
+            grid-column:span 6;
+            background-color: aqua;
+            align-items:left;
+         }
+         
+         #parent >div:nth-child(even){
+            background-color:pink;
+         }
+
+         #parent >div:nth-child(odd){
+            background-color:rgba(251, 251, 98, 0.676);
+         }
+
+         #parent >div:nth-child(6n+1){
+            background-color: aqua;
+         }
+
+    </style>
+</head>
+<body>
+
+    <h1 style="font-family:cursive; text-align: center;">Weekly schedule</h1>
+    <div id="parent">
+        <div></div>
+        <div>Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thursday</div>
+        <div>Friday</div>
+
+        <div class="time">08:00</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+
+        <div class="time" >09:00</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div class="time" >10:00</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+    
+        <div class="time" >11:00</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div class="time">12:00</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+
+        <div style="align-items: start;">Note:</div>
+        
+    </div>
+</body>
+</html>
