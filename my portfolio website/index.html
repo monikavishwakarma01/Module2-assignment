@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mahi Vishwakarma - Full-stack developer passionate about creating elegant solutions and beautiful user interfaces.">
+    <meta name="author" content="Mahi Vishwakarma">
+    <title>Monika Vishwakarma - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- HEADER -->
+        <header class="header">
+            <nav class="nav-container">
+                <div class="nav-content">
+                    <!-- Logo and Name -->
+                    <div class="logo-section">
+                        <div class="logo-box">
+                            <span class="logo-letter">M</span>
+                        </div>
+                        <span class="logo-name">Monika Vishwakarma</span>
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <div class="desktop-nav">
+                        <a href="#home" class="nav-link">Home</a>
+                        <a href="#skills" class="nav-link">Skills</a>
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </div>
+
+                    <!-- Mobile Hamburger Menu -->
+                    <div class="mobile-hamburger">
+                        <label for="menu-toggle" class="hamburger-label">
+                            <div class="hamburger-icon">
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-line"></span>
+                                <span class="hamburger-line"></span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu -->
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                <div class="mobile-menu">
+                    <div class="mobile-menu-content">
+                        <a href="#home" class="mobile-nav-link">Home</a>
+                        <a href="#skills" class="mobile-nav-link">Skills</a>
+                        <a href="#contact" class="mobile-nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- HERO SECTION -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <h1 class="hero-title">
+                    Building Digital Experiences
+                    <br>
+                    <span class="hero-accent">One Line at a Time</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Full-stack developer passionate about creating elegant solutions and beautiful user interfaces.
+                    Turning ideas into reality through clean code and thoughtful design.
+                </p>
+                <a href="#contact" class="cta-button">Contact Me</a>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="skills-section">
+            <div class="skills-container">
+                <h2 class="skills-title">My Skills</h2>
+
+                <!-- Skills Grid -->
+                <div class="skills-grid">
+                    <!-- Skill Card 1 - HTML -->
+                    <div class="skill-card">
+                        <div class="skill-icon-box">
+                            <svg class="skill-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 18.178l-4.62-1.256-.328-3.544h2.27l.158 1.844 2.52.667 2.52-.667.26-2.063H6.96l-.635-6.678h11.35l-.227 2.21H8.822l.204 2.256h8.217l-.624 6.778L12 18.178zM3 2h18l-1.623 18L12 22l-7.377-2L3 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="skill-name">HTML</h3>
+                        <p class="skill-description">
+                            Semantic markup and accessibility-focused structure for modern web applications.
+                        </p>
+                    </div>
+
+                    <!-- Skill Card 2 - CSS -->
+                    <div class="skill-card">
+                        <div class="skill-icon-box">
+                            <svg class="skill-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.377 3L18.962 20l-6.96 2L5.038 20 3.623 3h16.754zM7.3 14.58l.267 2.422 4.436 1.19 4.439-1.191.522-5.442H7.763l-.24-2.143h9.53l.243-2.141H6.704l.596 7.305z"/>
+                            </svg>
+                        </div>
+                        <h3 class="skill-name">CSS</h3>
+                        <p class="skill-description">
+                            Advanced styling with animations, transitions, and responsive design principles.
+                        </p>
+                    </div>
+
+                    <!-- Skill Card 3 - JavaScript -->
+                    <div class="skill-card">
+                        <div class="skill-icon-box">
+                            <svg class="skill-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 3h18v18H3V3zm16.525 13.707c-.131-.821-.666-1.511-2.252-2.155-.552-.259-1.165-.438-1.349-.854-.068-.248-.078-.382-.034-.529.113-.484.687-.629 1.137-.495.293.09.563.315.732.676.775-.507.775-.507 1.316-.844-.203-.314-.304-.451-.439-.586-.473-.528-1.103-.798-2.126-.775l-.528.067c-.507.124-.991.395-1.283.754-.855.968-.611 2.655.427 3.354 1.023.765 2.521.933 2.712 1.653.18.878-.652 1.159-1.475 1.058-.607-.136-.945-.439-1.316-1.002l-1.372.788c.157.359.337.517.607.832 1.305 1.316 4.568 1.249 5.153-.754.021-.067.18-.528.056-1.237l.034.049zm-6.737-5.434h-1.686c0 1.453-.007 2.898-.007 4.354 0 .924.047 1.772-.104 2.033-.247.517-.886.451-1.175.359-.297-.146-.448-.349-.623-.641-.047-.078-.082-.146-.095-.146l-1.368.844c.229.473.563.879.994 1.137.641.383 1.502.507 2.404.305.588-.17 1.095-.519 1.358-1.059.384-.697.302-1.553.299-2.509.008-1.541 0-3.083 0-4.635l.003-.042z"/>
+                            </svg>
+                        </div>
+                        <h3 class="skill-name">JavaScript <span class="skill-level">(Basic)</span></h3>
+                        <p class="skill-description">
+                            Fundamental programming concepts and DOM manipulation for interactive experiences.
+                        </p>
+                    </div>
+
+                    <!-- Skill Card 4 - React -->
+                    <div class="skill-card">
+                        <div class="skill-icon-box">
+                            <svg class="skill-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 10.11c1.03 0 1.87.84 1.87 1.89 0 1-.84 1.85-1.87 1.85S10.13 13 10.13 12c0-1.05.84-1.89 1.87-1.89M7.37 20c.63.38 2.01-.2 3.6-1.7-.52-.59-1.03-1.23-1.51-1.9a22.7 22.7 0 0 1-2.4-.36c-.51 2.14-.32 3.61.31 3.96m.71-5.74l-.29-.51c-.11.29-.22.58-.29.86.27.06.57.11.88.16l-.3-.51m6.54-.76l.81-1.5-.81-1.5c-.3-.53-.62-1-.91-1.47C13.17 9 12.6 9 12 9c-.6 0-1.17 0-1.71.03-.29.47-.61.94-.91 1.47L8.57 12l.81 1.5c.3.53.62 1 .91 1.47.54.03 1.11.03 1.71.03.6 0 1.17 0 1.71-.03.29-.47.61-.94.91-1.47M12 6.78c-.19.22-.39.45-.59.72h1.18c-.2-.27-.4-.5-.59-.72m0 10.44c.19-.22.39-.45.59-.72h-1.18c.2.27.4.5.59.72M16.62 4c-.62-.38-2 .2-3.59 1.7.52.59 1.03 1.23 1.51 1.9.82.08 1.63.2 2.4.36.51-2.14.32-3.61-.32-3.96m-.7 5.74l.29.51c.11-.29.22-.58.29-.86-.27-.06-.57-.11-.88-.16l.3.51m1.45-7.05c1.47.84 1.63 3.05 1.01 5.63 2.54.75 4.37 1.99 4.37 3.68s-1.83 2.93-4.37 3.68c.62 2.58.46 4.79-1.01 5.63-1.46.84-3.45-.12-5.37-1.95-1.92 1.83-3.91 2.79-5.38 1.95-1.46-.84-1.62-3.05-1-5.63-2.54-.75-4.37-1.99-4.37-3.68s1.83-2.93 4.37-3.68c-.62-2.58-.46-4.79 1-5.63 1.47-.84 3.46.12 5.38 1.95 1.92-1.83 3.91-2.79 5.37-1.95M17.08 12c.34.75.64 1.5.89 2.26 2.1-.63 3.28-1.53 3.28-2.26 0-.73-1.18-1.63-3.28-2.26-.25.76-.55 1.51-.89 2.26M6.92 12c-.34-.75-.64-1.5-.89-2.26-2.1.63-3.28 1.53-3.28 2.26 0 .73 1.18 1.63 3.28 2.26.25-.76.55-1.51.89-2.26m9.86 4.3c.48.17.89.29 1.28.39.39-1.54.19-2.74-.23-3.43-.33.75-.69 1.5-1.05 2.26l.15.27.15.27.15.27.15.26-.15.01m-9.2-8.6c-.49-.17-.9-.29-1.29-.39-.39 1.54-.19 2.74.23 3.43.33-.75.69-1.5 1.05-2.26l-.15-.27-.15-.27-.15-.27-.15-.26.16-.01z"/>
+                            </svg>
+                        </div>
+                        <h3 class="skill-name">React <span class="skill-level">(Basic)</span></h3>
+                        <p class="skill-description">
+                            Component-based architecture and state management for dynamic web applications.
+                        </p>
+                    </div>
+
+                    <!-- Skill Card 5 - Git & GitHub -->
+                    <div class="skill-card">
+                        <div class="skill-icon-box">
+                            <svg class="skill-icon" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                            </svg>
+                        </div>
+                        <h3 class="skill-name">Git & GitHub</h3>
+                        <p class="skill-description">
+                            Version control and collaborative development with industry-standard tools.
+                        </p>
+                    </div>
+
+                    <!-- Skill Card 6 - Responsive Design -->
+                    <div class="skill-card">
+                        <div class="skill-icon-box">
+                            <svg class="skill-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="skill-name">Responsive Web Design</h3>
+                        <p class="skill-description">
+                            Mobile-first approach ensuring seamless experiences across all devices and screens.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer id="contact" class="footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <h3 class="footer-title">Let's Connect</h3>
+                    <p class="footer-subtitle">
+                        Feel free to reach out for collaborations or just a friendly chat!
+                    </p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                    </a>
+
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <svg class="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="copyright">
+                        © 2025 Monika Vishwakarma. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
