@@ -19,8 +19,10 @@ console.log(profile)
 
 
 ////////// Q.3
-
-
+  
+function sumAll(...sum){
+}
+sumAll(1,2,3,4 )
 
 /////Q.4
 
@@ -28,6 +30,10 @@ let numbers = [10, 20, 30, 40, 50];
 
 let {a}= numbers
 console.log(numbers)
+
+
+let remaining =[...numbers]
+console.log(remaining)
 
 
 
@@ -43,7 +49,7 @@ let user = {
   }
 };
 
-let {city,lat, lng} = user
+const {city, lat,  lng} = user
 console.log(user);
 
 

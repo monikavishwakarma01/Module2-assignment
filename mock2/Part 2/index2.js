@@ -1,34 +1,33 @@
 
  //////Q.8
 
-// let nums = [10, 3, 7, 20, 13, 2];
+let nums = [10, 3, 7, 20, 13, 2];
 
-// nums.map( a= a*a)
-// .filter(a%2==0)
-// .reduce()
-// .sort(a.[nums] - b.[nums])
+   let num2= nums.map( a=> a*a).filter(a%2==0 ).reduce().sort()
   
+
+   console.log(num2)
 
 
 
 
 //////Q.9
 
-  displayCar(callbackFn)
-displayTruck(callbackFn)
+//   displayCar(callbackFn)
+// displayTruck(callbackFn)
 
-displayBike(callbackFn)
-
-
-
-vehicleInfo(vehicleCategory, callbackFn)={
-}
+// displayBike(callbackFn)
 
 
 
-vehicleInfo("Car", displayCar)
-vehicleInfo("Truck", displayTruck)
-vehicleInfo("Bike", displayBike)
+// vehicleInfo(vehicleCategory, callbackFn)={
+// }
+
+
+
+// vehicleInfo("Car", displayCar)
+// vehicleInfo("Truck", displayTruck)
+// vehicleInfo("Bike", displayBike)
 
 
 
