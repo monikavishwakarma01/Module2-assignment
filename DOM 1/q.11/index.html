@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="head1">Welcome to fist DOM project</h1>
+        <p>this is 1st pera</p>
+        <p>this is 2nd pera</p>
+        <p> this is 3rd pera</p>
+    </div>
+</body>
+<script>
+    document.getElementById("head1").textContent="Welcome to the DOM World!";
+
+    let peras=document.getElementsByTagName("p");
+    for(let i=0; i<peras.length; i++){
+        peras[i].style.color="blue";
+    }
+    document.querySelector(".container").style.backgroundColor="yellow";
+</script>
+</html>
