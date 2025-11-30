@@ -3,13 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To-Do-List</title>
+  <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    body{
+        background-color: rgba(100, 148, 237, 0.508);
+        padding: 20px;
+    }
+
+
+    h1{
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #bodycontainer{
+        margin:100px;
+         gap:6px;
+         display: flex;
+         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    #container{
+         gap:10px;
+        display: grid;
+        grid-template-columns:repeat(3, 1fr);
+    }
+    .listitem{
+        width:auto;
+        height:100%;
+        padding:10px;
+        gap:10px;
+        margin: 12px;
+        border: 2px solid green;
+        display: flex;
+        background-color: azure;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+  </style>
+
 </head>
 <body>
-
-    <input type="text" id="text1">
-    <button onclick="btn1Click()">Add Task</button>
-
+    <div id="bodycontainer"> 
+       <h1>To-Do List</h1>
+       <input type="text" id="text1">
+       <button onclick="btn1Click()">Add Task</button>
+    </div>
 
     <ul id="ulcontainer"></ul>
     
@@ -17,16 +66,16 @@
 <script>
      let lists=[];
 
-    function btn1Click(){
-       document.getElementById("text1").value
+      function btn1Click(){
+        let content= document.getElementById("text1").value
 
-
-
-       let worklist={
+        let worklist = {
          content: content
-       }
-
+        }
+   
+         
        lists.push(worklist);
+
 
        render()
     }
@@ -35,13 +84,35 @@
         let container= document.getElementById("ulcontainer");
         container.innerHTML="";
        
-        data.forEach(elements => {
-             let listitemall = document.createElement("")
+        data.forEach((worklist, index) => {
+             let listitemall = document.createElement("div")
+             listitemall.className="listitem"
 
+             listitemall.innerHTML=`
+                    <p>${worklist.content}</p>
+                    <button id="deleteEl">Delete</button>
+                    <button id="completebtn">Complete</button>
+                `
+         
+              ulcontainer.append(listitemall)
+
+
+        
+            deleteEl.addEventListener("click", function(){
+            deleteEl.parentElement.remove()
         });
+    
+    
        
+        completebtn.addEventListener("click",  function(){
+         completebtn.style.textDecoration="line-through"
+        });
 
+    
+     });
+   
     }
+
 
  </script>
 </html>

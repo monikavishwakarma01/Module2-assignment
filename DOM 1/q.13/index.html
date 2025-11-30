@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        padding: 20px;
+        background-color: aliceblue;
+    }
+    #maindiv{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    #divcontainer{
+        gap: 10px;
+        display: flex;
+    }
+    #divc{
+        height: 100px;
+        border:1px solid whitesmoke ;
+        width: 100px;
+        box-shadow: rgba(153, 155, 155, 0.35) 0px 5px 15px;
+    }
+     #divt{
+        height: 100px;
+        border:1px solid whitesmoke;
+        width: 100px;
+        box-shadow: rgba(153, 155, 155, 0.35) 0px 5px 15px;
+    }
+    button{
+        background-color: rgb(137, 151, 159);
+        border: none;
+        padding: 4px;
+        border-radius: 4px;
+        color: rgb(4, 5, 4);
+    }
+ </style>
+<body>
+<div id="maindiv">
+
+    
+         <div id="divc"></div>
+         <div id="divt"></div>
+
+          <input type="text" id="colorinput">
+         <input type="text" id="textcontent">
+
+     
+
+      <button onclick="changebg()">Change Background</button>
+      <button onclick="changetext()">Update Text</button>
+    </div>
+    
+</body>
+<script>
+     function changebg(){
+        let changebg= document.getElementById("colorinput")
+        let div1= document.getElementById("divc")
+
+        div1.style.backgroundColor = changebg.value;  
+     }
+
+     function changetext(){
+        let changetext= document.getElementById("textcontent")
+        let div2= document.getElementById("divt")
+
+        div2.textContent = changetext.value;  
+     }
+</script>
+</html>
