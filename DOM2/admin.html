@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+             background-color: rgb(171, 216, 216);
+             gap: 20px;
+             align-items: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+    button{
+        background-color: rgba(18, 59, 161, 0.937);
+        color:rgb(242, 232, 232);
+         border-radius:4px;
+         border:none;
+         padding: 5px;
+         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    }
+
+
+    #bookContainer{
+        display: grid;
+        grid-template-columns:repeat(3, 1fr);
+    }
+        
+    .book-card{
+        width: auto;
+        height: 100%;
+        background-color: rgba(111, 111, 187, 0.53);
+        color: aliceblue;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius:8px;
+        box-shadow: rgba(245, 240, 240, 0.94) 0px 3px 8px;
+    }
+     
+    #deletebtn{
+        color: aliceblue;
+        background-color: red;
+        padding: 3px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h3>Add Book</h3>
+         <input type="text" id="title" placeholder="Enter Title">
+         <input type="text" id="author" placeholder="Enter Author">
+         <select id="category">
+                   <option value="All">All</option>
+                  <option value="Fiction">Fiction</option>
+                  <option value="Comedy">Comedy</option>
+                  <option value="Technical">Technical</option>
+             </select>
+             <br>
+         <button onclick="addbook()">Add Book</button>
+    </div>
+
+      <div>
+       <button onclick="sortAZ()">sort title A -> Z</button>
+       <button onclick="sortZA()">sort title Z -> A</button>
+      </div>
+         
+      <!--Filler Dropdown-->
+        <div class="sort-filler-container">
+             <select id="filter" onchange="filterBooks()">
+                <option value="All">All</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Technical">Technical</option>
+             </select>
+        </div>       
+        
+    
+       <div id="bookContainer" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px;">
+        </div>
+</body>
+     <script>
+        let books=[]; // yaha sari books store hogi
+        function addbook() {
+            // 1, get values
+         let title = document.getElementById("title").value;
+         let author = document.getElementById("author").value;
+         let category = document.getElementById("category").value;
+
+
+         if(title === "" || author === "") {
+                alert("Please fill Title and Author");
+                return;
+         }
+            
+          /// 2. create book object
+         let book ={
+              title: title,
+             author: author,
+              category: category,
+             imageUrl: "https://m.media-amazon.com/images/I/71ZB18P3inL._SY522_.jpg"
+          }
+
+          /// 3. push into array
+          books.push(book);
+
+          /// 4. display books again
+            renderBooks();
+
+            // ✅ Clear input fields
+              document.getElementById("title").value = "";
+             document.getElementById("author").value = "";
+             document.getElementById("category").value = "All"; // default select
+        }
+
+        function renderBooks(){
+            let container = document.getElementById("bookContainer");
+            container.innerHTML=""  /// old card remove
+
+             books.forEach((book, index) => {
+                let card = document.createElement("div");
+                card.className="book-card";
+                card.style.border = "1px solid grey";
+                card.style.padding = "10px";
+                card.style.boxShadow = "0px 0px 10px rgba(0,0,0,0.2)";
+                card.style.borderRadius = "10px";
+
+              card.innerHTML = `
+                <img src="${book.imageUrl}" width="100">
+                <h3>${book.title}</h3>
+                <p>${book.author}</p>
+                <p>${book.category}</p>
+                <button onclick="deleteBook(${index})" id="deletebtn">Delete</button>
+
+                `;
+
+            container.append(card);
+
+             });
+        }
+
+        function sortAZ(){
+            books.sort((a,b) => a.title.localeCompare(b.title));
+            renderBooks();
+        }
+
+        function sortZA(){
+            books.sort((a, b)=>b.title.localeCompare(a.title));
+            renderBooks();
+        }
+
+        function filterBooks() {
+          let selected = document.getElementById("filter").value;
+
+            if(selected=="All"){
+                renderBooks(books);
+                return;
+            }
+
+            let filtered = books.filter(book => book.category === category);
+            
+          renderBooks(filtered);  // filtered array render karna
+        }
+   
+        function deleteBook(index) {
+         books.splice(index, 1);  // array se remove
+         renderBooks();           // UI update
+       }
+
+     </script>
+</html>

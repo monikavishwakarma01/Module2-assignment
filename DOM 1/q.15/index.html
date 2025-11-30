@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="text1">
+    <button onclick="btn1Click()">Add Task</button>
+
+
+    <ul id="ulcontainer"></ul>
+    
+</body>
+<script>
+     let lists=[];
+
+    function btn1Click(){
+       document.getElementById("text1").value
+
+
+
+       let worklist={
+         content: content
+       }
+
+       lists.push(worklist);
+
+       render()
+    }
+
+    function render(data = lists){
+        let container= document.getElementById("ulcontainer");
+        container.innerHTML="";
+       
+        data.forEach(elements => {
+             let listitemall = document.createElement("")
+
+        });
+       
+
+    }
+
+ </script>
+</html>
