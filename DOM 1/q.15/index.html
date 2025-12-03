@@ -90,23 +90,20 @@
 
              listitemall.innerHTML=`
                     <p>${worklist.content}</p>
-                    <button id="deleteEl">Delete</button>
+                    <button id="deleteEl" onclick="deletebtnf(${index})">Delete</button>
                     <button id="completebtn">Complete</button>
                 `
          
               ulcontainer.append(listitemall)
 
-
         
             deleteEl.addEventListener("click", function(){
             deleteEl.parentElement.remove()
-        });
-    
-    
-       
-        completebtn.addEventListener("click",  function(){
-         completebtn.style.textDecoration="line-through"
-        });
+             });
+
+            completebtn.addEventListener("click",  function(){
+            completebtn.style.textDecoration="line-through"
+             });
 
     
      });
