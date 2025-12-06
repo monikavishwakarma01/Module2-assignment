@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            padding: 20px;
+            background-image:url(https://tse1.mm.bing.net/th/id/OIP.8tw7kIiyjQFxuffuErp6mwAAAA?pid=Api&P=0&h=180);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #notebook{
+            color: #000;
+        }
+
+        #savebtn{
+            margin: 10px;
+            border:none;
+            border-radius:5px;
+            background-color:green;
+            padding: 5px;
+            color: #000;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        }
+        #loadbtn{
+            margin: 10px;
+            border:none;
+            border-radius: 5px;
+            background-color:rgb(112, 148, 159);
+            padding: 5px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            color: #fbfbfb;
+        }
+
+        #clearbtn{
+            margin: 10px;
+            border:none;
+            border-radius:4px;
+            box-shadow: rgba(3, 3, 48, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            background-color:rgb(236, 30, 30);
+            padding: 5px;
+            color:white;
+        }
+     </style>
+</head>
+<body>
+     <textarea id="noteBook" placeholder=" Write your notes..."></textarea>
+     <br><br>
+     <button id="savebtn">Save Notes</button>
+     <button id="loadbtn">Load Notes</button>
+     <button id="clearbtn">Clear Notes</button>
+</body>
+<script>
+  let textBox = document.getElementById("noteBook");
+
+  // Save Notes
+  document.getElementById("savebtn").onclick = function () {
+    localStorage.setItem("notes", textBox.value);
+    alert("Notes Saved!");
+  };
+
+  // Load Notes
+  document.getElementById("loadbtn").onclick = function () {
+    let saved = localStorage.getItem("notes");
+    if (saved) {
+      textBox.value = saved;
+    } else {
+      alert("No notes found!");
+    }
+  };
+
+  // Clear Notes
+  document.getElementById("clearbtn").onclick = function () {
+    localStorage.removeItem("notes");
+    textBox.value = "";
+    alert("Notes Cleared!");
+  };
+</script>
+</body>
